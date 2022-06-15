@@ -6,6 +6,12 @@ namespace CarLotSimulator
 {
     internal class Car
     {
+        public Car() {
+            CarLot.numberOfCars++;
+            CarLot.staticParkingLot.Add(this);
+            Console.WriteLine($"Number of Cars in Static Parking Lot: {CarLot.numberOfCars}");
+
+        }
         public string Make;
         public string Model;
         public int Year;
